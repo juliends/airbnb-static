@@ -1,0 +1,10 @@
+<h1>Our flats</h1>
+
+<% @flats.each do |flat| %>
+  <div>
+    <%= link_to flat["name"], flat_path(flat['id']) %>
+    <%= image_tag flat["imageUrl"], alt: "flat image", width: 300 %>
+  </div>
+  <hr>
+<% end %>
+
